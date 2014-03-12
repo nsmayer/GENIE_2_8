@@ -279,7 +279,7 @@ namespace genie {
       	case (kKNO_ProbP_Baryon_vn_mult_gt2  ) : return "kKNO_ProbP_Baryon_vn_mult_gt2"; break; 
 	case (kKNO_ProbP_Baryon_vp_mult_gt2  ) : return "kKNO_ProbP_Baryon_vp_mult_gt2"; break; 
 	case (kKNO_ProbP_Baryon_vbarn_mult_gt2 ) : return "kKNO_ProbP_Baryon_vbarn_mult_gt2"; break; 
-	case (kKNO_ProbP_Baryon_vbarp_mult_gt2 ) : "kKNO_ProbP_Baryon_vbarp_mult_gt2"; break;
+	case (kKNO_ProbP_Baryon_vbarp_mult_gt2 ) : return "kKNO_ProbP_Baryon_vbarp_mult_gt2"; break;
 
 	default: 
 	  return "-";
@@ -378,7 +378,7 @@ namespace genie {
 	    kKNO_ProbP_Baryon_vp_mult_gt2, 
 	    kKNO_ProbP_Baryon_vbarn_mult_gt2, 
 	    kKNO_ProbP_Baryon_vbarp_mult_gt2,
-	    kNullSystematic,
+	    kNullSystematic
 	    
 	  };
 
