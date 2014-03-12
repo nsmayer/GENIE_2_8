@@ -14,6 +14,7 @@
   For the full text of the license visit http://copyright.genie-mc.org
   or see $GENIE/LICENSE
 */
+
 //____________________________________________________________________________
 
 #ifndef _G_SYSTEMATIC_PARAM_H_
