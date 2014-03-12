@@ -179,8 +179,8 @@ void GSystUncertainty::SetDefaults(void)
   this->SetUncertainty( kKNO_Levyc_vbarn, 0.1, 0.1);
   
   this->SetUncertainty( kKNO_AvgHad_Mult, 0.1, 0.1);
-  this->SetUncertainty( kKNO_ProbP_Baryon_vn_mult_e2,, 0.1, 0.1);
-  this->SetUncertainty( kKNO_ProbP_Baryon_vp_mult_e2, , 0.1, 0.1);
+  this->SetUncertainty( kKNO_ProbP_Baryon_vn_mult_e2, 0.1, 0.1);
+  this->SetUncertainty( kKNO_ProbP_Baryon_vp_mult_e2, 0.1, 0.1);
   this->SetUncertainty( kKNO_ProbP_Baryon_vbarn_mult_e2, 0.1, 0.1);
   this->SetUncertainty( kKNO_ProbP_Baryon_vbarp_mult_e2, 0.1, 0.1);
   this->SetUncertainty( kKNO_ProbP_Baryon_vn_mult_gt2, 0.1, 0.1);
