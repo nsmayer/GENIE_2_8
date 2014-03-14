@@ -190,7 +190,8 @@ void DISHadronicSystemGenerator::AddFragmentationProducts(
   //-- Handle the case that the hadronizer produced weighted events and
   //   take into account that the current event might be already weighted
   evrec->SetWeight (wght * evrec->Weight());
-
+  evrec->SetProbRec(fHadronizationModel->ProbRec());
+  
   plist->Delete();
   delete plist;
 }
@@ -256,7 +257,6 @@ void DISHadronicSystemGenerator::SimulateFormationZone(
     double dt = 0;
     TLorentzVector dx4(dr,dt);                       // 4-vector step
     TLorentzVector x4new = *(p->X4()) + dx4;         // new position
-
     //-- If the formation zone was large enough that the particle is now outside
     //   the nucleus make sure that it is not placed further away from the 
     //   (max distance particles tracked by intranuclear cascade) + ~2 fm

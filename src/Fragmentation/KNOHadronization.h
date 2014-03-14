@@ -62,6 +62,7 @@ public:
   // members from configuration options
   void Configure(const Registry & config);
   void Configure(string config);
+  ///double MultiProb(int mult, int maxQ, double minW) const;
 
 private:
 
@@ -120,9 +121,18 @@ private:
   double   fCvn;                 ///< Levy function parameter for vn
   double   fCvbp;                ///< Levy function parameter for vbp
   double   fCvbn;                ///< Levy function parameter for vbn
+  double   favg_had_mult;        ///< Scale factor for average hadron multiplicity //EDITIED BY ANNE NOT SURE IF THIS IS RIGHT
+  double   fbary_vn_mult_e2;     ///< Probability of choosing a Proton as your Baryon for neutrino neutron, two particles in FS
+  double   fbary_vbp_mult_e2;    ///< Probability of choosing a Proton as your Baryon for anti-neutrino proton, two particles in FS
+  double   fbary_vp_mult_gt2;    ///< Probability of choosing a Proton as your Baryon for neutrino proton, more than two particles in FS
+  double   fbary_vn_mult_gt2;    ///< Probability of choosing a Proton as your Baryon for neutrino neutron, more than two particles in FS
+  double   fbary_vbp_mult_gt2;   ///< Probability of choosing a Proton as your Baryon for anti-neutrino proton, more than two particles in FS
+  double   fbary_vbn_mult_gt2;   ///< Probability of choosing a Proton as your Baryon for anti-neutrino neutron, more than two particles in FS
   TF1 *    fBaryonXFpdf;         ///< baryon xF PDF
   TF1 *    fBaryonPT2pdf;        ///< baryon pT^2 PDF
 //Spline * fKNO;                 ///< legacy KNO distribution (superseded by the Levy func)
+  double fMultiProb;
+  
 };
 
 }         // genie namespace

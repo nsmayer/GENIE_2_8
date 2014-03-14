@@ -22,6 +22,7 @@
 #define _HADRONIZATION_MODEL_BASE_H_
 
 #include "Fragmentation/HadronizationModelI.h"
+#include "GHEP/ProbabilityRecord.h"
 
 namespace genie {
 
@@ -37,11 +38,13 @@ public:
   virtual double         Weight           (void)                                 const = 0;
   virtual PDGCodeList *  SelectParticles  (const Interaction*)                   const = 0;
   virtual TH1D *         MultiplicityProb (const Interaction*, Option_t* opt="") const = 0;
+  
 
 protected:
   HadronizationModelBase();
   HadronizationModelBase(string name);
   HadronizationModelBase(string name, string config);
+  ProbabilityRecord * ProbRec() {return fProbRec;}
   virtual ~HadronizationModelBase();
 
   //! Various utility methods common to hadronization models
@@ -69,6 +72,9 @@ protected:
   double   fRvbnCCm3;    ///< neugen's Rijk: vbn, CC, multiplicity = 3
   double   fRvbnNCm2;    ///< neugen's Rijk: vbn, NC, multiplicity = 2
   double   fRvbnNCm3;    ///< neugen's Rijk: vbn, NC, multiplicity = 3
+
+  ProbabilityRecord *fProbRec;
+  
 };
 
 }         // genie namespace

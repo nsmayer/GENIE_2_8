@@ -29,6 +29,7 @@
 #include "Conventions/KinePhaseSpace.h"
 #include "Interaction/Interaction.h" 
 #include "GHEP/GHepStatus.h"
+#include "GHEP/ProbabilityRecord.h"
 
 class TRootIOCtor;
 class TLorentzVector;
@@ -53,6 +54,10 @@ public :
 
   virtual Interaction * Summary       (void) const;
   virtual void          AttachSummary (Interaction * interaction);
+
+  //Probability Record Functions for KNO hadronization probability record
+  void SetProbRec(ProbabilityRecord *rec) { fProbRec = rec; }
+  ProbabilityRecord * ProbRec() {return fProbRec;}
 
   // Provide a simplified wrapper of the 'new with placement'
   // TClonesArray object insertion method
@@ -158,6 +163,7 @@ protected:
 
   // Attached interaction
   Interaction * fInteraction; ///< attached summary information
+  ProbabilityRecord *fProbRec; ///< Probability Record for KNO hadronization
 
   // Vertex position
   TLorentzVector * fVtx;  ///< vertex in the detector coordinate system

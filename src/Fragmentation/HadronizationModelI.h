@@ -22,6 +22,7 @@
 #define _HADRONIZATION_MODEL_I_H_
 
 #include "Algorithm/Algorithm.h"
+#include "GHEP/ProbabilityRecord.h"
 
 class TClonesArray;
 class TH1D;
@@ -44,12 +45,19 @@ public:
   virtual double         Weight           (void)                                 const = 0;
   virtual PDGCodeList *  SelectParticles  (const Interaction*)                   const = 0;
   virtual TH1D *         MultiplicityProb (const Interaction*, Option_t* opt="") const = 0;
+  ProbabilityRecord * ProbRec() {return fProbRec;}
 
 protected:
 
   HadronizationModelI();
   HadronizationModelI(string name);
   HadronizationModelI(string name, string config);
+  
+
+ private:
+  ProbabilityRecord *fProbRec;
+
+  
 };
 
 }         // genie namespace

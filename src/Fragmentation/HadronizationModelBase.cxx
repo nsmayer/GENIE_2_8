@@ -34,19 +34,22 @@ using namespace genie::constants;
 
 //____________________________________________________________________________
 HadronizationModelBase::HadronizationModelBase(void) :
-HadronizationModelI()
+  HadronizationModelI(),
+  fProbRec()
 {
 
 }
 //____________________________________________________________________________
 HadronizationModelBase::HadronizationModelBase(string name) :
-HadronizationModelI(name)
+  HadronizationModelI(name),
+  fProbRec()
 {
 
 }
 //____________________________________________________________________________
 HadronizationModelBase::HadronizationModelBase(string name, string config) :
-HadronizationModelI(name, config)
+  HadronizationModelI(name, config),
+  fProbRec()
 {
 
 }
